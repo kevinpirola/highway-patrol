@@ -1,0 +1,36 @@
+Selezione SR SS SP
+Selezione numero,
+
+
+OPPURE VICEVERSA a partire dal numero faccio vedere le opzioni.
+
+Ricerca per "nome" della strada
+
+Stessa pagina
+
+Ricerca strada -> selezione km (non serve ettometrico)
+
+
+Quando si dà conferma si vedono prima e seconda competenza terza competenza.
+
+
+-----
+
+SQUADRA:
+
+nome  Mestre Mira
+
+-----
+
+Inserimento di uno scaglione
+
+dal km tot al km tot le varie competenze.
+
+----
+
+aggiungere il comune per il km
+
+
+----
+
+competenza strada  e comune su un campo di note
