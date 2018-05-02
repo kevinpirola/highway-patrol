@@ -14,6 +14,9 @@
         </button>
     </div>
     <table id="highways"></table>
+    
+    <h3 class="mt-5">Aggiungi nuova strada</h3>
+    <input/> 
 
     <script>
         $(document).ready(function () {
@@ -36,6 +39,9 @@
                     }, {
                         field: 'combinations',
                         visible: false
+                    }, {
+                        field: 'id',
+                        visible: false
                     }
                 ],
                 data: <?php echo json_encode($highways) ?>,
@@ -45,7 +51,8 @@
                 clickToSelect: true,
                 singleSelect: true,
                 toolbar: '#toolbar',
-                checkboxHeader: false
+                checkboxHeader: false,
+                idField: 'id'
             });
             
             table.on('check.bs.table uncheck.bs.table ' + 'check-all.bs.table uncheck-all.bs.table',
@@ -56,6 +63,22 @@
                 //selections = getIdSelections();
                 // push or splice the selections if you want to save all data selections
             });
+            
+            remove.click(function () {
+                var ids = getIdSelections();
+                table.bootstrapTable('remove', {
+                    field: 'id',
+                    values: ids
+                });
+                remove.prop('disabled', true);
+            });
+            
+            function getIdSelections() {
+                return $.map(table.bootstrapTable('getSelections'), function (row) {
+                    return row.id
+                });
+            }
         });
+        
     </script>
 </div>
